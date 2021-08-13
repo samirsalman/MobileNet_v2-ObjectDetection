@@ -1,5 +1,6 @@
 from model import MobileNet
 from utils.youtube_downloader import YoutubeDownloader
+from models import DetectionModels
 
 # example video (traffic video)
 url = 'https://www.youtube.com/watch?v=jjlBnrzSGjc&ab_channel=PanasonicSecurity'
@@ -9,10 +10,12 @@ video_name = youtube_downloader.download_video()
 
 # ----------------------------------------------------------------------------------
 
+MODEL = DetectionModels.MOBILENET_V2
+
 # init the MobileNet model
-net = MobileNet(weights_path='models/frozen_inference_graph.pb',
-                pbtext_path='models/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt',
-                classnames_path="./models/coco.names")
+net = MobileNet(weights_path=MODEL["weights"],
+                pbtext_path=MODEL["pbtxt"],
+                classnames_path=MODEL["classnames"])
 
 # ---------------------------------------------------------------------------------
 # test the model
