@@ -6,11 +6,24 @@ Supported models (updating):
 - YOLO v3
 - MobileNet v2
 
-![test](https://github.com/samirsalman/MobileNet_v2-ObjectDetection/blob/main/tests/test.gif)
+| | |
+|:-------------------------:|:-------------------------:|
+|YOLO v3 ![YOLOv3](https://github.com/samirsalman/Yolo_v3-VS-MobileNet_v2-ObjectDetection/blob/main/tests/yolo.gif) | MOBILENET v2  ![mobilenet](https://github.com/samirsalman/Yolo_v3-VS-MobileNet_v2-ObjectDetection/blob/main/tests/mobilenet.gif)|
 
 ## Project Structure
 
-## Model
+- models -> This directory contains all supported models (weights and configurations)
+  - Models.py -> contains all models path to allow the imports
+
+- utils -> Contains the utils files and function used in the project
+  - YoutubeDownloader.py -> Allow the user to download videos from YouTube
+
+- DetectionModel.py -> Class that allows to init a Detection Model
+
+- main.py -> main file, where the user can specify the model to use and the test mode (camera or YT video)
+
+
+## Models
 
 ## Author
 
